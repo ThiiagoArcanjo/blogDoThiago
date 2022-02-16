@@ -10,6 +10,7 @@
         {% endif %}
 
         <p>{{ post.texto|linebreaksbr }}</p>
+        <a class="btn btn-default" href="{% url 'post_edite' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
 
 
     </div>
