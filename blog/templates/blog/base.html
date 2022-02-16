@@ -12,7 +12,9 @@
     <body>
         <div class="page-header">
             <div class="cabecalho">
-                <a href="{% url 'novo_post' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+                {% if user.is_authenticated %}
+                    <a href="{% url 'novo_post' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+                {% endif %}
                 <h1><a href="">blog Do Thiago</a></h1>
             </div>
             <div class="menu">
