@@ -1,0 +1,38 @@
+{% load static %}
+<html>
+    <head>
+        <title>blog Do Thiago</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+
+    </head>
+    <body>
+        <div class="page-header">
+            <div class="cabecalho">
+                <h1><a href="">blog Do Thiago</a></h1>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="#">Hi</a></li>
+                    <li><a href="#">Currículo</a></li>
+                    <li><a href="#">Portfólio</a></li>
+                    <li><a href="#">Posts</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="content container">
+            <div class="row">
+                <div class="col-md-8">
+                    {% block content %}
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+      
+
+    </body>
+</html>
