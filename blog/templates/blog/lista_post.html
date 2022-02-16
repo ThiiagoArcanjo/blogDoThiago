@@ -1,20 +1,36 @@
+{% load static %}
 <html>
     <head>
         <title>blog Do Thiago</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+        <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+
     </head>
     <body>
-        <div>
+        <div class="cabecalho">
             <h1><a href="">blog Do Thiago</a></h1>
         </div>
 
-        {% for post in posts %}
-            <div>
-                <p>Publicação: {{ post.data_de_publicacao }}</p>
-                <h2><a href="">{{ post.titulo }}</a></h2>
-                <p>{{ post.texto|linebreaksbr }}</p>
+        <div class="content container">
+            <div class="row">
+                <div class="col-md-8">
+                    {% for post in posts %}
+                        <div class="post"> 
+                            <h2><a href="">{{ post.titulo }}</a></h2>
+                            <div class="date">
+                                <p>Publicação: {{ post.data_de_publicacao }}</p>
+                            </div>
+                            <p>{{ post.texto|linebreaksbr }}</p>
+                        </div>
+                    {% endfor %}
+                
+                </div>
             </div>
-        {% endfor %}
-        
+        </div>
+      
 
     </body>
 </html>
