@@ -7,7 +7,9 @@
             {{ form.as_p }}
             <button type="submit" class="save btn btn-default">Save</button>
         </form>
+    {% else %}
+        <h2>Área restrita</h2>
     {% endif %}
-    <h2>Área restrita</h2>
+
 
 {% endblock %}

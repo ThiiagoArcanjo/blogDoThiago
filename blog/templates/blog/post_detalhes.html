@@ -12,6 +12,7 @@
         <p>{{ post.texto|linebreaksbr }}</p>
         {% if user.is_authenticated %}
             <a class="btn btn-default" href="{% url 'post_edite' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a class="btn btn-default" href="{% url 'excluir_post' pk=post.pk %}"><span class="glyphicon glyphicon-rubber">Apagar</a>
         {% endif %}
 
     </div>
