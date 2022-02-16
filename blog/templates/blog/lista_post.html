@@ -6,17 +6,15 @@
         <div>
             <h1><a href="">blog Do Thiago</a></h1>
         </div>
-        <div>
-            <p>Data de publicão</p>
-            <h2><a href="">Primeiro post</a></h2>
-            <p>Texto de post</p>
-        </div>
+
+        {% for post in posts %}
+            <div>
+                <p>Publicação: {{ post.data_de_publicacao }}</p>
+                <h2><a href="">{{ post.titulo }}</a></h2>
+                <p>{{ post.texto|linebreaksbr }}</p>
+            </div>
+        {% endfor %}
         
-        <div>
-            <p>Data de publicão</p>
-            <h2><a href="">Segund post</a></h2>
-            <p>Texto de post</p>
-        </div>
 
     </body>
 </html>
