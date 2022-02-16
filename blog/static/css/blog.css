@@ -61,6 +61,7 @@ h1, h2, h3, h4{
     margin-bottom: 70px;
 }
 
+
 /* Inclinando a div ao pasasr o mouse */
 .titulo:hover{
     -webkit-transform: rotateZ(+2deg);
@@ -70,7 +71,7 @@ h1, h2, h3, h4{
 
 .post h2 a, .post h2 a:visited {
     color: #021d0b;
-    font-size: 45pt;
+    font-size: 35pt;
 }
 
 .menu{
