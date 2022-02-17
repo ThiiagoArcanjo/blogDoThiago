@@ -1,0 +1,13 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    {% if user.is_authenticated %}
+        <h2>Deseja mesmo excluir esse post?</h2>
+        <a class="btn btn-default" href="{% url 'excluir_post' pk=post.pk %}"><span class="glyphicon glyphicon-rubber">Sim</a>
+        <a class="btn btn-default" href="{% url 'post_detalhes' pk=post.pk %}"><span class="glyphicon glyphicon-rubber">Não</a>
+    {% else %}
+        <h2>Área restrita</h2>
+    {% endif %}
+
+
+{% endblock %}

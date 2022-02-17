@@ -48,3 +48,8 @@ def excluir_post(request, pk):
     post = get_object_or_404(Post, pk=pk)
     post.delete()
     return redirect('lista_post')
+
+
+def confirmar_exclusao(request, pk):
+    post = get_object_or_404(Post, pk=pk)
+    return render(request, 'blog/confirmar_exclusao.html', {'post': post})
