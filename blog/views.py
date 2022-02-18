@@ -53,3 +53,9 @@ def excluir_post(request, pk):
 def confirmar_exclusao(request, pk):
     post = get_object_or_404(Post, pk=pk)
     return render(request, 'blog/confirmar_exclusao.html', {'post': post})
+
+def hi(request):
+    return render(request, 'blog/hi.html')
+
+def curriculo(request):
+    return render(request, 'blog/curriculo.html')
