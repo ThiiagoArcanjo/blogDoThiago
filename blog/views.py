@@ -3,9 +3,14 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.utils import timezone
 from .models import Post
 from .forms import PostForm
+from django.core.paginator import Paginator
 
 def lista_post(request):
-    posts = Post.objects.filter(data_de_publicacao__lte=timezone.now()).order_by('data_de_publicacao')
+    posts_list = Post.objects.all().order_by('data_de_publicacao')
+    paginator = Paginator(posts_list, 2)
+    
+    page = request.GET.get('page')
+    posts = paginator.get_page(page)
     return render(request, 'blog/lista_post.html', {'posts': posts})
 
 def post_detalhes(request, pk):
