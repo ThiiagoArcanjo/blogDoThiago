@@ -10,5 +10,4 @@ urlpatterns = [
     path('post/<int:pk>/excluir/', views.excluir_post, name='excluir_post'),
     path('post/<int:pk>/confirmar_exclusao/', views.confirmar_exclusao, name='confirmar_exclusao'),
     path('hi/', views.hi, name="hi"),
-    path('curriculo/', views.curriculo, name="curriculo"),
 ]

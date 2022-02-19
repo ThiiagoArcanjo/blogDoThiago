@@ -9,9 +9,11 @@ body{
 }
 
 .page-header{
-    background-color: rgb(3, 110, 50);
+    background-color: rgb(3, 110, 50); 
     margin-top: 0;
-    padding: 20px 20px 20px 40px;    
+    padding: 20px 20px;  
+    text-align: center;
+    
 }
 
 /* Inclinando a div ao pasasr o mouse */
@@ -101,4 +103,19 @@ h1, h2, h3, h4{
 
 .menu li a:hover{
    text-shadow: 2px 2px 2px #aaa
+}
+
+.hi{
+    text-align: center;
+    width: 100%;
+    border: 2px solid rgb(41, 15, 134);
+}
+
+.rodape{
+    background-color: rgb(1, 44, 20); 
+    margin-top: 300px;
+    padding: 20px 20px;  
+    text-align: center;
+    color: beige;
+    text-align: right;
 }

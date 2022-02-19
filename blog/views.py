@@ -4,9 +4,6 @@ from django.utils import timezone
 from .models import Post
 from .forms import PostForm
 
-
-
-
 def lista_post(request):
     posts = Post.objects.filter(data_de_publicacao__lte=timezone.now()).order_by('data_de_publicacao')
     return render(request, 'blog/lista_post.html', {'posts': posts})
@@ -56,6 +53,3 @@ def confirmar_exclusao(request, pk):
 
 def hi(request):
     return render(request, 'blog/hi.html')
-
-def curriculo(request):
-    return render(request, 'blog/curriculo.html')
